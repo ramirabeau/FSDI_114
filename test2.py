@@ -1,4 +1,6 @@
-#!/usr/bin/env python3 
+#!/usr/bin/env python3
+# -*- coding: utf8 -*-
+"""Functions"""
 
 from queue2stacks import Queue2Stacks
 

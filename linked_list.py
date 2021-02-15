@@ -144,14 +144,23 @@ class DLList:
         new_node.prev = tail
         return True
 
-    def insert_after(self, prev_node, data):
+    def insert_after(self, prev_node, data, new_data):
         """This method inserts data after the prev_node
             prev pointer has to point to its previous node
             and its next pointer has to point to the next node
             in the list
         """
-        pass
-
+        if prev_node is None:
+            return ("This node is not present.")
+       
+        new_node = Node(data = new_data)
+        new_node.next = prev_node.next
+        prev_node.next = new_node
+        new_node.prev = prev_node
+        if new_node.next is not None:
+            new_node.next.prev = new_node
+        
+        return True
 
 
 
